@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     width: '90%',
     backgroundColor: 'white',
     borderRadius: 34,
-    marginTop: 80,
+    marginTop: 60,
     paddingHorizontal: 30
   },
   loginContent: {
@@ -68,13 +68,35 @@ const styles = StyleSheet.create({
   },
 
   containerInicioMenu: {
-    width: '75%',
-    backgroundColor: 'red',
-    width: 250,
-    height: 30,
+    marginTop: 12,
+    height: 36,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    borderRadius: 20,
+    borderColor: '#EAEAF5',
+    borderWidth: 2
+  },
+  logInBtn: {
+    backgroundColor: '#FF0036',
+    width: '50%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 20,
+  },
+  logInBtnText: {
+    color: 'white'
+  },
+  singUpBtn: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    width: '50%',
+    borderRadius: 20,
+  },
+  singUpBtnText: {
+    color: '#FF0036'
   }
 });
 
