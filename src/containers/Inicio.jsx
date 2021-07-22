@@ -20,13 +20,13 @@ const Inicio = ({ navigation }) => {
                         <InicioMenu />
                     </View>
                     <View style={styles.loginContent}>
-                        <LogIn />
+						{ inicioPage === 'LogIn' ? <LogIn /> : <SingUp />}    
                     </View>
 
 					<View style={styles.loginContent}>
 						<CustomButton
 							onPress={() => navigation.navigate('Home')}
-							title='Ingresar'
+							title={inicioPage === 'LogIn' ? 'Ingresar' : 'Registrar'}
 							styleButton={styles.redButton}
 							styleText={styles.redButtonText}
 						/>

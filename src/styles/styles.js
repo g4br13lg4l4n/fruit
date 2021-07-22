@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
 
   containerInicioMenu: {
     marginTop: 12,
-    height: 36,
+    height: 40,
+    marginBottom: -16,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     borderColor: '#EAEAF5',
     borderWidth: 2
   },
-  logInBtn: {
+  inicioActiveBtn: {
     backgroundColor: '#FF0036',
     width: '50%',
     height: '100%',
@@ -85,17 +86,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 20,
   },
-  logInBtnText: {
+  inicioActiveBtnText: {
     color: 'white'
   },
-  singUpBtn: {
+  inicioDesableBtn: {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
     width: '50%',
     borderRadius: 20,
   },
-  singUpBtnText: {
+  inicioDesableBtnText: {
     color: '#FF0036'
   }
 });
