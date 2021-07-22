@@ -13,11 +13,12 @@ const styles = StyleSheet.create({
     width: '90%',
     backgroundColor: 'white',
     borderRadius: 34,
-    marginTop: 80
+    marginTop: 80,
+    paddingHorizontal: 30
   },
   loginContent: {
-    width: '75%',
-    marginVertical: 30,
+    marginVertical: 12,
+    width: '100%'
   },
   textInput: {
     color: '#A8A7A7',
@@ -28,8 +29,6 @@ const styles = StyleSheet.create({
     borderBottomColor: '#EAEAF5',
   },
   lostPasswordLink: {
-    alignItems: 'flex-end',
-    flex: 1
   },
   redButton: {
     borderRadius: 50,
@@ -41,7 +40,7 @@ const styles = StyleSheet.create({
   redButtonText: {
     textAlign: 'center',
     paddingVertical: 12,
-    color: 'white'
+    color: 'white',
   },
   loginSocialMedia: {
     marginTop: 38,
@@ -64,12 +63,18 @@ const styles = StyleSheet.create({
     width: 250
   },
   textLostPassword: {
-    color: '#A8A7A7'
+    color: '#A8A7A7',
+    textAlign: 'right'
   },
-  slideContainer: {
-    height: 100,
+
+  containerInicioMenu: {
+    width: '75%',
     backgroundColor: 'red',
-    flex: 1
+    width: 250,
+    height: 30,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   }
 });
 

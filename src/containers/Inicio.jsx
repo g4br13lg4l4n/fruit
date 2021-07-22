@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Text, View, Alert, SafeAreaView, Image, ImageBackground } from 'react-native';
+import { Text, View, SafeAreaView, Image, ImageBackground } from 'react-native';
 import CustomButton from '../components/CustomButton';
 import styles from '../styles/styles';
 import LogIn from './LogIn';
 import SingUp from './SingUp';
-
+import InicioMenu from '../components/InicioMenu';
 
 const Inicio = ({ navigation }) => {
 	const [text, setText] = useState('');
@@ -13,9 +13,11 @@ const Inicio = ({ navigation }) => {
 			<ImageBackground source={require('../../assets/background_2.png')} style={styles.image}>
 				<Text style={styles.title}>Fruits & Vegetables</Text>
 				<SafeAreaView style={styles.loginWrapper}>
-                    <View>
+                    <View style={styles.loginContent}>
+                        <InicioMenu />
+                    </View>
+                    <View style={styles.loginContent}>
                         <LogIn />
-                        <SingUp />
                     </View>
 
 					<View style={styles.loginContent}>
