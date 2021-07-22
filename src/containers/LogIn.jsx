@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Text, TextInput, View} from 'react-native';
 import styles from '../styles/styles';
 
 const LogIn = () => {
-	const [text, setText] = useState('');
 	return (
 		<View style={styles.loginContent}>
 			<TextInput

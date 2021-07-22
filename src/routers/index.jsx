@@ -5,25 +5,29 @@ import Inicio from '../containers/Inicio';
 import Home from '../containers/Home';
 import Product from '../containers/Product';
 import Checkout from '../containers/Checkout';
+import useInitalState from '../hooks/useInitialState';
+import AppContext from '../context/AppContext';
 
 export default function NavigationRoutes() {
+    const initialState = useInitalState();
     const isLogin = false;
     const Stack = createStackNavigator()
     const options = {
-      screenOptions : {
-        headerShown:false,
-      },
-      initialRouteName: isLogin ? "Home" : "LogIn"
+        screenOptions: {
+            headerShown: false,
+        },
+        initialRouteName: isLogin ? "Home" : "LogIn"
     }
-  
     return (
-      <NavigationContainer>
-        <Stack.Navigator {...options}>
-          <Stack.Screen name="Inicio" component={Inicio}/>
-          <Stack.Screen name="Home" component={Home}/>
-          <Stack.Screen name="Product" component={Product}/> 
-          <Stack.Screen name="Checkout" component={Checkout}/>
-        </Stack.Navigator>
-      </NavigationContainer>
+        <AppContext.Provider value={initialState}>
+            <NavigationContainer>
+                <Stack.Navigator {...options}>
+                    <Stack.Screen name="Inicio" component={Inicio} />
+                    <Stack.Screen name="Home" component={Home} />
+                    <Stack.Screen name="Product" component={Product} />
+                    <Stack.Screen name="Checkout" component={Checkout} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </AppContext.Provider>
     )
-  }
+}

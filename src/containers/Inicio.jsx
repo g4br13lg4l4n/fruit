@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import { Text, View, SafeAreaView, Image, ImageBackground } from 'react-native';
 import CustomButton from '../components/CustomButton';
 import styles from '../styles/styles';
 import LogIn from './LogIn';
 import SingUp from './SingUp';
+import AppContext from '../context/AppContext';
 import InicioMenu from '../components/InicioMenu';
 
 const Inicio = ({ navigation }) => {
-	const [text, setText] = useState('');
+	const { state } = useContext(AppContext);
+    const { inicioPage } = state;
+	console.log('inicioPage ------>', inicioPage);
 	return (
         <View style={styles.container}>
 			<ImageBackground source={require('../../assets/background_2.png')} style={styles.image}>
