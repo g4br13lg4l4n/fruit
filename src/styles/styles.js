@@ -1,6 +1,7 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, StatusBar } from 'react-native';
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
+const barHeight = StatusBar.currentHeight;
 
 const red = '#FF0036';
 const white = 'white';
@@ -13,6 +14,10 @@ const styles = StyleSheet.create({
   container: {
     height: windowHeight,
     backgroundColor: background,
+  },
+  containerBar: {
+    flex: 1,
+    paddingTop: barHeight,
   },
   loginWrapper: {
     width: '90%',
@@ -101,6 +106,13 @@ const styles = StyleSheet.create({
   },
   inicioDesableBtnText: {
     color: red
+  },
+  scrollView: {},
+  barUpContainer: {
+    marginHorizontal: 12,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   }
 });
 

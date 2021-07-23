@@ -14,7 +14,7 @@ const Inicio = ({ navigation }) => {
         <View style={styles.container}>
 			<ImageBackground source={require('../../assets/background_2.png')} style={styles.image}>
 				<Text style={styles.title}>Fruits & Vegetables</Text>
-				<SafeAreaView style={styles.loginWrapper}>
+				<View style={styles.loginWrapper}>
                     <View style={styles.loginContent}>
                         <InicioMenu />
                     </View>
@@ -45,7 +45,7 @@ const Inicio = ({ navigation }) => {
 						/>
 					</View>
 
-				</SafeAreaView>
+				</View>
 			</ImageBackground>
 		</View>
     )
