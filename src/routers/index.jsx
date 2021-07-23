@@ -16,7 +16,7 @@ export default function NavigationRoutes() {
         screenOptions: {
             headerShown: false,
         },
-        initialRouteName: isLogin ? "Home" : "LogIn"
+        initialRouteName: isLogin ? "Home" : "Inicio"
     }
     return (
         <AppContext.Provider value={initialState}>

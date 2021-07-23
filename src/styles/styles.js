@@ -9,15 +9,17 @@ const gray = '#A8A7A7';
 const gray2 = '#EAEAF5';
 const black = 'black';
 const background = '#F7F6FF';
+const green = '#6FCF97';
 
 const styles = StyleSheet.create({
   container: {
     height: windowHeight,
     backgroundColor: background,
   },
-  containerBar: {
-    flex: 1,
+  containerSafeArea: {
     paddingTop: barHeight,
+    height: windowHeight,
+    backgroundColor: background,
   },
   loginWrapper: {
     width: '90%',
@@ -113,6 +115,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  tabNavigationContainer: {
+    borderTopWidth: 2,
+    borderTopColor: gray2,
+    width: windowWidth, 
+    height: 70,
+    position: 'absolute',
+    bottom: -barHeight,
+    paddingHorizontal: 12,
+    backgroundColor: white,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  tabNavigatorTouchable: {
+    alignItems: 'center',
   }
 });
 
