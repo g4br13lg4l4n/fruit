@@ -1,17 +1,22 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width;
+
+const red = '#FF0036';
+const white = 'white';
+const gray = '#A8A7A7';
+const gray2 = '#EAEAF5';
+const black = 'black';
+const background = '#F7F6FF';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#F7F6FF',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: windowHeight,
+    backgroundColor: background,
   },
   loginWrapper: {
-    alignItems: 'center',
-    justifyContent: 'center',
     width: '90%',
-    backgroundColor: 'white',
+    backgroundColor: white,
     borderRadius: 34,
     marginTop: 60,
     paddingHorizontal: 30
@@ -21,26 +26,24 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   textInput: {
-    color: '#A8A7A7',
+    color: black,
     height: 40,
     fontSize: 14,
     marginVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: '#EAEAF5',
-  },
-  lostPasswordLink: {
+    borderBottomColor: gray2,
   },
   redButton: {
     borderRadius: 50,
-    backgroundColor: '#FF0036',
-    color: 'white',
+    backgroundColor: red,
+    color: white,
     height: 46,
     width: '100%'
   },
   redButtonText: {
     textAlign: 'center',
     paddingVertical: 12,
-    color: 'white',
+    color: white,
   },
   loginSocialMedia: {
     marginTop: 38,
@@ -50,54 +53,54 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   image: {
+    paddingTop: 60,
     flex: 1,
     resizeMode: "cover",
     height: 400,
-    width: '100%',
     alignItems: 'center',
-    justifyContent: 'center',
   },
   title: {
-    color: 'white',
+    color: white,
     fontSize: 40,
     width: 250
   },
   textLostPassword: {
-    color: '#A8A7A7',
+    color: gray,
     textAlign: 'right'
   },
-
   containerInicioMenu: {
-    marginTop: 12,
-    height: 40,
-    marginBottom: -16,
+    marginTop: 6,
+    height: 42,
+    marginBottom: -14,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
     borderRadius: 20,
-    borderColor: '#EAEAF5',
+    borderColor: gray2,
     borderWidth: 2
   },
   inicioActiveBtn: {
-    backgroundColor: '#FF0036',
+    backgroundColor: red,
     width: '50%',
-    height: '100%',
+    height: 38,
     alignItems: 'center',
     justifyContent: 'center',
+    borderTopLeftRadius: 20,
     borderRadius: 20,
   },
   inicioActiveBtnText: {
-    color: 'white'
+    color: white
   },
   inicioDesableBtn: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: white,
+    height: 38,
     width: '50%',
     borderRadius: 20,
   },
   inicioDesableBtnText: {
-    color: '#FF0036'
+    color: red
   }
 });
 

@@ -10,7 +10,6 @@ import InicioMenu from '../components/InicioMenu';
 const Inicio = ({ navigation }) => {
 	const { state } = useContext(AppContext);
     const { inicioPage } = state;
-	console.log('inicioPage ------>', inicioPage);
 	return (
         <View style={styles.container}>
 			<ImageBackground source={require('../../assets/background_2.png')} style={styles.image}>
