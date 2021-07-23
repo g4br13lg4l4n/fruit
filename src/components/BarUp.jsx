@@ -9,7 +9,9 @@ const BarUp = () => {
             <TouchableOpacity>
                 <Icons icon={'backIcon'}/>
             </TouchableOpacity>
-            
+            <TouchableOpacity>
+                <Icons icon={'userIcon'}/>
+            </TouchableOpacity>
         </View>
     );
 }

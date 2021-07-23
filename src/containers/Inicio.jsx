@@ -6,6 +6,7 @@ import LogIn from './LogIn';
 import SingUp from './SingUp';
 import AppContext from '../context/AppContext';
 import InicioMenu from '../components/InicioMenu';
+import Icons from '../components/Icons';
 
 const Inicio = ({ navigation }) => {
 	const { state } = useContext(AppContext);
@@ -34,15 +35,9 @@ const Inicio = ({ navigation }) => {
 						<Text style={{ color: '#A8A7A7' }}>O</Text>
 					</View>
 					<View style={styles.loginSocialMedia}>
-						<Image
-							source={require('../../assets/face.png')}
-						/>
-						<Image
-							source={require('../../assets/tw.png')}
-						/>
-						<Image
-							source={require('../../assets/google.png')}
-						/>
+						<Icons icon={'facebookIcon'} w={50} h={50}/>
+						<Icons icon={'twIcon'} w={50} h={50}/>
+						<Icons icon={'googleIcon'} w={50} h={50}/>
 					</View>
 
 				</View>
