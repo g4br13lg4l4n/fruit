@@ -132,6 +132,37 @@ const styles = StyleSheet.create({
   tabNavigatorTouchable: {
     alignItems: 'center',
     flex: .333
+  },
+  circleBasketContainer: {
+    height: 30,
+    width: 60,
+    backgroundColor: background,
+    borderColor: gray2,
+    position: 'relative',
+    top: -21,
+    borderBottomRightRadius: 50,
+    borderBottomLeftRadius: 50,
+    borderWidth: 2,
+    borderTopColor: background
+  },
+  basketButtom: {
+    backgroundColor: green,
+    borderRadius: 50,
+    height: 52,
+    width: 52,
+    position: 'absolute',
+    justifyContent: 'center',
+    alignItems:'center',
+    left: 2,
+    bottom: 2,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    shadowOpacity: 0.50,
+    shadowRadius: 12.35,
+    elevation: 5
   }
 });
 

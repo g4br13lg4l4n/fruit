@@ -22,12 +22,13 @@ const TabNavigator = ({ navigation }) => {
                 <Icons icon={'checkIcon'} />
                 <Text>Pedidos</Text>
             </TouchableOpacity>
-            <TouchableOpacity 
-                style={styles.tabNavigatorTouchable}
-                onPress={() => navigation.navigate('Checkout')}>
-                    <Icons icon={'basketIcon'} />
-                    <Text>cesta</Text>
-            </TouchableOpacity>
+            <View style={styles.circleBasketContainer}>
+                <TouchableOpacity 
+                    style={[styles.tabNavigatorTouchable, styles.basketButtom]}
+                    onPress={() => navigation.navigate('Checkout')}>
+                        <Icons icon={'basketIcon'} />
+                </TouchableOpacity>
+            </View>
             <TouchableOpacity 
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('Support')}>
