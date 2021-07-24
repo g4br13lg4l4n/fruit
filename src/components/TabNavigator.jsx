@@ -4,24 +4,39 @@ import {useRoute} from '@react-navigation/native';
 import styles from '../styles/styles';
 import Icons from './Icons';
 
-const TabNavigator = ({ }) => {
+const TabNavigator = ({ navigation }) => {
     const route = useRoute();
     console.log(route.name);
+
     return (
         <View style={styles.tabNavigationContainer}>
-            <TouchableOpacity style={styles.tabNavigatorTouchable}>
+            <TouchableOpacity 
+                style={styles.tabNavigatorTouchable}
+                onPress={() => navigation.navigate('Home')}>
                 <Icons icon={'homeIcon'} />
-                <Text>Productos</Text>
+                <Text>Home</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.tabNavigatorTouchable}>
-            <   Icons icon={'checkIcon'} />
+            <TouchableOpacity 
+                style={styles.tabNavigatorTouchable}
+                onPress={() => navigation.navigate('Orders')}>
+                <Icons icon={'checkIcon'} />
                 <Text>Pedidos</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.tabNavigatorTouchable}>
-                <Icons icon={'searchIcon'} />
-                <Text>Buscar</Text>
+            <TouchableOpacity 
+                style={styles.tabNavigatorTouchable}
+                onPress={() => navigation.navigate('Checkout')}>
+                    <Icons icon={'basketIcon'} />
+                    <Text>cesta</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.tabNavigatorTouchable}>
+            <TouchableOpacity 
+                style={styles.tabNavigatorTouchable}
+                onPress={() => navigation.navigate('Support')}>
+                <Icons icon={'helpIcon'} />
+                <Text>Soporte</Text>
+            </TouchableOpacity>
+            <TouchableOpacity 
+                style={styles.tabNavigatorTouchable}
+                onPress={() => navigation.navigate('More')}>
                 <Icons icon={'settingsIcon'} />
                 <Text>Mas</Text>
             </TouchableOpacity>

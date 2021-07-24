@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
   },
   tabNavigatorTouchable: {
     alignItems: 'center',
+    flex: .333
   }
 });
 

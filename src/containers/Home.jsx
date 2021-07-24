@@ -4,7 +4,7 @@ import BarUp from '../components/BarUp';
 import TabNavigator from '../components/TabNavigator';
 import styles from '../styles/styles';
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
@@ -13,7 +13,7 @@ const Home = () => {
           
         </View>
       </ScrollView>
-      <TabNavigator />
+      <TabNavigator navigation={navigation} />
     </SafeAreaView>
   );
 }
