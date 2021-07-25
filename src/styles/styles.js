@@ -10,10 +10,11 @@ const gray2 = '#EAEAF5';
 const black = 'black';
 const background = '#F7F6FF';
 const green = '#6FCF97';
+const marginHorizontal = 12;
 
 const styles = StyleSheet.create({
   container: {
-    height: windowHeight,
+    height: windowHeight + barHeight,
     backgroundColor: background,
   },
   containerSafeArea: {
@@ -31,6 +32,13 @@ const styles = StyleSheet.create({
   loginContent: {
     marginVertical: 12,
     width: '100%'
+  },
+  containerScreen: {
+    marginTop: 8,
+    marginHorizontal: marginHorizontal
+  },
+  textAlignCenter: {
+    textAlign: 'center'
   },
   textInput: {
     color: black,
@@ -111,7 +119,7 @@ const styles = StyleSheet.create({
   },
   scrollView: {},
   barUpContainer: {
-    marginHorizontal: 12,
+    marginHorizontal: marginHorizontal,
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -119,7 +127,7 @@ const styles = StyleSheet.create({
   tabNavigationContainer: {
     borderTopWidth: 2,
     borderTopColor: gray2,
-    width: windowWidth, 
+    width: windowWidth,
     height: 70,
     position: 'absolute',
     bottom: -barHeight,
@@ -152,7 +160,7 @@ const styles = StyleSheet.create({
     width: 52,
     position: 'absolute',
     justifyContent: 'center',
-    alignItems:'center',
+    alignItems: 'center',
     left: 2,
     bottom: 2,
     shadowColor: "#000",
@@ -165,10 +173,70 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   tabNavigatorActiveText: {
-    color: red
+    color: red,
+    fontSize: 12
   },
   tabNavigatorDesableText: {
-    color: green
+    color: green,
+    fontSize: 12
+  },
+  /**
+   * Home
+   */
+  titleHome: {
+    fontSize: 24,
+  },
+  titleHomeStrong: {
+    fontSize: 24,
+    fontWeight: 'bold',
+  },
+  inputSearch: {
+    backgroundColor: white,
+    borderWidth: 2,
+    borderColor: gray2,
+    borderRadius: 50,
+    height: 44,
+    paddingLeft: 12,
+    color: black
+  },
+  categoryTextTitle: {
+    fontWeight: 'bold',
+    fontSize: 16
+  },
+  categoriesContainer: {
+    marginTop: 18,
+    marginBottom: 20,
+    marginHorizontal: marginHorizontal,
+  },
+  listCategoryContainer: {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    marginTop: 12
+  },
+  cardCategory: {
+    backgroundColor: white,
+    borderRadius: 20,
+    width: '31%',
+    alignItems: 'center',
+    paddingBottom: 10,
+    shadowColor: gray,
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    shadowOpacity: 0.50,
+    shadowRadius: 2.35,
+    elevation: 12
+  },
+  cardCategoryImage: {
+    width: 70, 
+    height: 70,
+  },
+  cardCategoryText: {
+    color: gray,
+    marginTop: -18,
+    fontSize: 12
   }
 });
 
