@@ -163,6 +163,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.50,
     shadowRadius: 12.35,
     elevation: 5
+  },
+  tabNavigatorActiveText: {
+    color: red
+  },
+  tabNavigatorDesableText: {
+    color: green
   }
 });
 

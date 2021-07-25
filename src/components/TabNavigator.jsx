@@ -14,13 +14,13 @@ const TabNavigator = ({ navigation }) => {
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('Home')}>
                 <Icons icon={'homeIcon'} />
-                <Text>Home</Text>
+                <Text style={styles.tabNavigatorActiveText}>Home</Text>
             </TouchableOpacity>
             <TouchableOpacity 
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('Orders')}>
                 <Icons icon={'checkIcon'} />
-                <Text>Pedidos</Text>
+                <Text style={styles.tabNavigatorDesableText}>Pedidos</Text>
             </TouchableOpacity>
             <View style={styles.circleBasketContainer}>
                 <TouchableOpacity 
@@ -33,13 +33,13 @@ const TabNavigator = ({ navigation }) => {
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('Support')}>
                 <Icons icon={'helpIcon'} />
-                <Text>Soporte</Text>
+                <Text style={styles.tabNavigatorDesableText}>Soporte</Text>
             </TouchableOpacity>
             <TouchableOpacity 
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('More')}>
                 <Icons icon={'settingsIcon'} />
-                <Text>Mas</Text>
+                <Text style={styles.tabNavigatorDesableText}>Mas</Text>
             </TouchableOpacity>
         </View>
     );
