@@ -7,6 +7,7 @@ const red = '#FF0036';
 const white = 'white';
 const gray = '#A8A7A7';
 const gray2 = '#EAEAF5';
+const gray3 = '#4F4F4F';
 const black = 'black';
 const background = '#F7F6FF';
 const green = '#6FCF97';
@@ -39,7 +40,8 @@ const styles = StyleSheet.create({
     marginHorizontal: marginHorizontal
   },
   textAlignCenter: {
-    textAlign: 'center'
+    textAlign: 'center',
+    color: green
   },
   fontWeightBold: {
     fontWeight: 'bold'
@@ -184,7 +186,7 @@ const styles = StyleSheet.create({
     fontSize: regularFontSize
   },
   /**
-   * Home
+   * Home Screen
    */
   titleHome: {
     fontSize: 24,
@@ -241,7 +243,7 @@ const styles = StyleSheet.create({
     elevation: 16,
   },
   cardCategoryImage: {
-    width: 70, 
+    width: 70,
     height: 70,
   },
   cardCategoryText: {
@@ -283,6 +285,62 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexDirection: 'row'
+  },
+  /**
+   * Product Screen
+   */
+  productImageContainer: {
+    alignItems: 'center',
+    marginTop: 12
+  },
+  productImage: {
+    width: 220,
+    height: 200,
+  },
+  discriptionProductContainer: {
+    marginTop: 10,
+    backgroundColor: white,
+    borderRadius: 20,
+    paddingTop: 17,
+    paddingBottom: 24,
+    paddingHorizontal: 14
+  },
+  productTitle: {
+    color: black,
+    fontSize: 20
+  },
+  productDescription: {
+    marginTop: 2,
+    color: gray3,
+    fontWeight: '600',
+    lineHeight: 19,
+    marginBottom: 18
+  },
+  rowPriceContainer: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    marginBottom: 16
+  },
+  priceCheckContainer: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  addRemoveProductContainer: {
+    borderWidth: 1,
+    borderColor: gray2,
+    borderRadius: 20,
+    flexDirection: 'row',
+    width: 114,
+    paddingHorizontal: 4,
+    height: 40,
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  addRemoveProductBtnText: {
+    fontSize: 20
+  },
+  sizeTypeSellText: {
+    fontSize: 20
   }
 });
 

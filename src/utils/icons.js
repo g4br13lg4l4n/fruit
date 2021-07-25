@@ -65,5 +65,11 @@ export default {
     </svg>`,
     plusIcon: `<svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12.3581 13V19H10.4568V13H4.75311V11H10.4568V5H12.3581V11H18.0618V13H12.3581Z" fill="white"/>
-    </svg>`
+    </svg>`,
+    minusBlackIcon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 13V11H19V13H5Z" fill="#2E3A59"/>
+    </svg>`,
+    plusBlackIcon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13 13V19H11V13H5V11H11V5H13V11H19V13H13Z" fill="#2E3A59"/>
+    </svg>`,
 }

@@ -12,6 +12,8 @@ target 'Fruit' do
     :hermes_enabled => false
   )
 
+  pod 'RNCCheckbox', :path => '../node_modules/@react-native-community/checkbox'
+
   target 'FruitTests' do
     inherit! :complete
     # Pods for testing
