@@ -11,6 +11,7 @@ const black = 'black';
 const background = '#F7F6FF';
 const green = '#6FCF97';
 const marginHorizontal = 12;
+const regularFontSize = 12;
 
 const styles = StyleSheet.create({
   container: {
@@ -39,6 +40,9 @@ const styles = StyleSheet.create({
   },
   textAlignCenter: {
     textAlign: 'center'
+  },
+  fontWeightBold: {
+    fontWeight: 'bold'
   },
   textInput: {
     color: black,
@@ -139,15 +143,14 @@ const styles = StyleSheet.create({
   },
   tabNavigatorTouchable: {
     alignItems: 'center',
-    flex: .333
   },
   circleBasketContainer: {
-    height: 30,
-    width: 60,
+    height: 34,
+    width: 65,
     backgroundColor: background,
     borderColor: gray2,
     position: 'relative',
-    top: -21,
+    top: -19,
     borderBottomRightRadius: 50,
     borderBottomLeftRadius: 50,
     borderWidth: 2,
@@ -156,8 +159,8 @@ const styles = StyleSheet.create({
   basketButtom: {
     backgroundColor: green,
     borderRadius: 50,
-    height: 52,
-    width: 52,
+    height: 57,
+    width: 57,
     position: 'absolute',
     justifyContent: 'center',
     alignItems: 'center',
@@ -174,11 +177,11 @@ const styles = StyleSheet.create({
   },
   tabNavigatorActiveText: {
     color: red,
-    fontSize: 12
+    fontSize: regularFontSize
   },
   tabNavigatorDesableText: {
     color: green,
-    fontSize: 12
+    fontSize: regularFontSize
   },
   /**
    * Home
@@ -250,7 +253,36 @@ const styles = StyleSheet.create({
     color: red,
     fontWeight: 'bold',
     marginTop: -18,
-    fontSize: 12
+    fontSize: regularFontSize
+  },
+  listProductsContainer: {
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    marginBottom: 50
+  },
+  plusBtn: {
+    backgroundColor: green,
+    borderRadius: 9,
+    width: 30,
+    height: 30,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  productContainer: {
+    width: (windowWidth / 2) - 20,
+    backgroundColor: white,
+    borderRadius: 19,
+    marginBottom: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    paddingBottom: 8
+  },
+  textProductContainer: {
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row'
   }
 });
 

@@ -26,7 +26,7 @@ const TabNavigator = ({ navigation }) => {
                 <TouchableOpacity 
                     style={[styles.tabNavigatorTouchable, styles.basketButtom]}
                     onPress={() => navigation.navigate('Checkout')}>
-                        <Icons icon={'basketIcon'} />
+                        <Icons icon={'basketIcon'} w={40} h={40} />
                 </TouchableOpacity>
             </View>
             <TouchableOpacity 

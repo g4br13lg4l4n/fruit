@@ -10,7 +10,7 @@ const Product = ({ navigation }) => {
       <ScrollView style={styles.scrollView}>
         <BarUp />
         <View>
-          <Text>Productos</Text>
+          <Text>Descripción del producto</Text>
         </View>
       </ScrollView>
       <TabNavigator navigation={navigation} />

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, SafeAreaView, ScrollView, Text, TextInput } from 'react-native';
 import BarUp from '../components/BarUp';
 import Categories from '../components/Categories';
+import ListProducts from '../components/ListProducts';
 import TabNavigator from '../components/TabNavigator';
 import styles from '../styles/styles';
 
@@ -27,6 +28,7 @@ const Home = ({ navigation }) => {
           />
         </View>
         <Categories />
+        <ListProducts navigation={navigation} />
       </ScrollView>
       <TabNavigator navigation={navigation} />
     </SafeAreaView>
