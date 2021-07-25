@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeAreaView, ScrollView } from 'react-native';
+import { View, SafeAreaView, ScrollView, Text } from 'react-native';
 import BarUp from '../components/BarUp';
 import TabNavigator from '../components/TabNavigator';
 import styles from '../styles/styles';
@@ -10,7 +10,7 @@ const Home = ({ navigation }) => {
       <ScrollView style={styles.scrollView}>
         <BarUp />
         <View>
-          
+          <Text>Home</Text>
         </View>
       </ScrollView>
       <TabNavigator navigation={navigation} />
