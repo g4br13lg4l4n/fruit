@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   },
   cardCategory: {
     backgroundColor: white,
-    borderRadius: 20,
+    borderRadius: 25,
     width: '31%',
     alignItems: 'center',
     paddingBottom: 10,
@@ -225,9 +225,17 @@ const styles = StyleSheet.create({
       width: 0,
       height: 9,
     },
-    shadowOpacity: 0.50,
-    shadowRadius: 2.35,
-    elevation: 12
+    elevation: 15
+  },
+  cardCategoryActive: {
+    borderColor: red,
+    borderWidth: 1,
+    shadowColor: red,
+    shadowOffset: {
+      width: 5,
+      height: 5,
+    },
+    elevation: 16,
   },
   cardCategoryImage: {
     width: 70, 
@@ -235,6 +243,12 @@ const styles = StyleSheet.create({
   },
   cardCategoryText: {
     color: gray,
+    marginTop: -18,
+    fontSize: 12
+  },
+  cardCategoryActiveText: {
+    color: red,
+    fontWeight: 'bold',
     marginTop: -18,
     fontSize: 12
   }

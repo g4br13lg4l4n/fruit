@@ -7,12 +7,12 @@ const Categories = ({}) => {
         <View style={styles.categoriesContainer}>
             <Text style={styles.categoryTextTitle}>Categorías</Text>
             <View style={styles.listCategoryContainer}>
-                <TouchableOpacity style={styles.cardCategory}>
+                <TouchableOpacity style={[styles.cardCategory, styles.cardCategoryActive]}>
                     <Image
                         source={require('../../assets/fruit.png')}
                         style={styles.cardCategoryImage}
                     />
-                    <Text style={[styles.textAlignCenter, styles.cardCategoryText]}>Frutas</Text>
+                    <Text style={[styles.textAlignCenter, styles.cardCategoryActiveText]}>Frutas</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.cardCategory}>
                     <Image
