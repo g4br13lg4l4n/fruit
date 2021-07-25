@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import styles from '../styles/styles';
 import Icons from './Icons';
 import {useRoute} from '@react-navigation/native';
 
 
-const BarUp = () => {
+const BarUp = ({ title }) => {
     const route = useRoute();
     console.log('route ---->', route.name);
     return(
@@ -13,6 +13,7 @@ const BarUp = () => {
             <TouchableOpacity>
                 <Icons icon={'backIcon'}/>
             </TouchableOpacity>
+            {title ? <Text style={styles.barUpTitle}> { title } </Text> : null}
             <TouchableOpacity>
                 <Icons icon={'userIcon'}/>
             </TouchableOpacity>

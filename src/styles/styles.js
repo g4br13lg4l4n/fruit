@@ -130,6 +130,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  barUpTitle: {
+    fontWeight: 'bold',
+    fontSize: 17
+  },
   tabNavigationContainer: {
     borderTopWidth: 2,
     borderTopColor: gray2,
@@ -375,6 +379,25 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingVertical: 12,
     color: green
+  },
+  /**
+   * Checkout
+   */
+  listChekoutProducts: {
+    backgroundColor: white,
+    borderRadius: 25,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    flexDirection: 'row'
+  },
+  imgListChekoutProducts: {
+    marginRight: 12,
+    width: 80,
+    height: 80
+  },
+  priceOptionsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
   }
 });
 
