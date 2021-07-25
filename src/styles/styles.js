@@ -341,6 +341,40 @@ const styles = StyleSheet.create({
   },
   sizeTypeSellText: {
     fontSize: 20
+  },
+  productsOptionsBtnContainer: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    position: 'absolute',
+    bottom: 0,
+    width: '92%',
+    marginHorizontal: marginHorizontal,
+  },
+  greenBtn: {
+    borderRadius: 50,
+    backgroundColor: green,
+    color: white,
+    height: 46,
+    width: '48%'
+  },
+  whiteButtonText: {
+    textAlign: 'center',
+    paddingVertical: 12,
+    color: white,
+  },
+  greenBorderBtn: {
+    borderRadius: 50,
+    borderColor: green,
+    borderWidth: 2,
+    color: white,
+    height: 46,
+    width: '45%',
+    backgroundColor: white
+  },
+  greenButtonText: {
+    textAlign: 'center',
+    paddingVertical: 12,
+    color: green
   }
 });
 

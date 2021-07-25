@@ -4,6 +4,7 @@ import CheckBox from '@react-native-community/checkbox';
 import BarUp from '../components/BarUp';
 import styles from '../styles/styles';
 import Icons from '../components/Icons';
+import CustomButton from '../components/CustomButton';
 
 const Product = ({ navigation }) => {
 	const [isSelected, setSelection] = useState(false);
@@ -76,13 +77,26 @@ const Product = ({ navigation }) => {
 									</TouchableOpacity>
 								</View>
 							</View>
-							<View>
-								
-							</View>
 						</View>
+
 					</View>
 				</View>
+				
 			</ScrollView>
+			<View style={[styles.productsOptionsBtnContainer, styles.containerScreen]}>
+					<CustomButton
+						onPress={() => navigation.navigate('Home')}
+						title={'Agregar'}
+						styleButton={styles.greenBorderBtn}
+						styleText={styles.greenButtonText}
+					/>
+					<CustomButton
+						onPress={() => navigation.navigate('Home')}
+						title={'Comprar'}
+						styleButton={styles.greenBtn}
+						styleText={styles.whiteButtonText}
+					/>
+				</View>
 		</SafeAreaView>
 	);
 }
