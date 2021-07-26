@@ -6,21 +6,59 @@ import Icons from './Icons';
 
 const TabNavigator = ({ navigation }) => {
     const route = useRoute();
-    console.log(route.name);
+    console.log('Tap component', route.name);
+
+    const navigationOptionsActive = () => {
+        let options = {};
+        switch (route.name) {
+            case 'Home':
+                options = {
+                    icon: 'homeActiveIcon'
+                }
+                break;
+            case 'Orders':
+                options = {
+                    icon: 'checkActiveIcon'
+                }
+                break;
+            case 'Checkout':
+                options = {
+                    icon: 'basketActiveIcon'
+                }
+                break;
+            case 'Support':
+                options = {
+                    icon: 'helpActiveIcon'
+                }
+                break;
+            case 'More':
+                options = {
+                    icon: 'settingsActiveIcon'
+                }
+                break;
+        
+            default:
+                options = {
+                    icon: 'homeActiveIcon'
+                }
+                break;   
+        }
+        return options;
+    }
 
     return (
         <View style={styles.tabNavigationContainer}>
             <TouchableOpacity 
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('Home')}>
-                <Icons icon={'homeIcon'} />
-                <Text style={styles.tabNavigatorActiveText}>Home</Text>
+                <Icons icon={route.name === 'Home' ? 'homeActiveIcon': 'homeIcon'} />
+                <Text style={route.name === 'Home' ? styles.tabNavigatorActiveText : styles.tabNavigatorDesableText}>Home</Text>
             </TouchableOpacity>
             <TouchableOpacity 
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('Orders')}>
-                <Icons icon={'checkIcon'} />
-                <Text style={styles.tabNavigatorDesableText}>Pedidos</Text>
+                <Icons icon={route.name === 'Orders' ? 'checkActiveIcon' :'checkIcon'} />
+                <Text style={route.name === 'Orders' ? styles.tabNavigatorActiveText : styles.tabNavigatorDesableText}>Pedidos</Text>
             </TouchableOpacity>
             <View style={styles.circleBasketContainer}>
                 <TouchableOpacity 
@@ -32,14 +70,14 @@ const TabNavigator = ({ navigation }) => {
             <TouchableOpacity 
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('Support')}>
-                <Icons icon={'helpIcon'} />
-                <Text style={styles.tabNavigatorDesableText}>Soporte</Text>
+                <Icons icon={route.name === 'Support' ? 'helpActiveIcon' : 'helpIcon'} />
+                <Text style={route.name === 'Support' ? styles.tabNavigatorActiveText : styles.tabNavigatorDesableText}>Soporte</Text>
             </TouchableOpacity>
             <TouchableOpacity 
                 style={styles.tabNavigatorTouchable}
                 onPress={() => navigation.navigate('More')}>
-                <Icons icon={'settingsIcon'} />
-                <Text style={styles.tabNavigatorDesableText}>Mas</Text>
+                <Icons icon={route.name === 'More' ? 'settingsActiveIcon' : 'settingsIcon'} />
+                <Text style={route.name === 'More' ? styles.tabNavigatorActiveText : styles.tabNavigatorDesableText}>Mas</Text>
             </TouchableOpacity>
         </View>
     );

@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     backgroundColor: white,
     alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   },
   tabNavigatorTouchable: {
     alignItems: 'center',
@@ -182,11 +182,11 @@ const styles = StyleSheet.create({
     elevation: 5
   },
   tabNavigatorActiveText: {
-    color: red,
+    color: green,
     fontSize: regularFontSize
   },
   tabNavigatorDesableText: {
-    color: green,
+    color: gray3,
     fontSize: regularFontSize
   },
   /**
