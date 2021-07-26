@@ -21,8 +21,7 @@ const styles = StyleSheet.create({
   },
   containerSafeArea: {
     paddingTop: barHeight,
-    height: windowHeight,
-    backgroundColor: background,
+    height: windowHeight + barHeight,
   },
   loginWrapper: {
     width: '90%',
@@ -145,7 +144,7 @@ const styles = StyleSheet.create({
     width: windowWidth,
     height: 70,
     position: 'absolute',
-    bottom: -barHeight,
+    bottom: 0,
     paddingHorizontal: 12,
     backgroundColor: white,
     alignItems: 'center',
@@ -355,7 +354,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row',
     position: 'absolute',
-    bottom: 0,
+    bottom: 40,
     width: '92%',
     marginHorizontal: marginHorizontal,
   },
@@ -364,12 +363,13 @@ const styles = StyleSheet.create({
     backgroundColor: green,
     color: white,
     height: 46,
-    width: '48%'
+    flex: 1
   },
   whiteButtonText: {
     textAlign: 'center',
     paddingVertical: 12,
     color: white,
+    fontWeight: 'bold'
   },
   greenBorderBtn: {
     borderRadius: 50,
@@ -383,7 +383,8 @@ const styles = StyleSheet.create({
   greenButtonText: {
     textAlign: 'center',
     paddingVertical: 12,
-    color: green
+    color: green,
+    fontWeight: 'bold'
   },
   /**
    * Checkout
@@ -419,6 +420,23 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     width: 80,
+  },
+  resumenContainer: {
+    backgroundColor: white,
+    borderRadius: 20,
+    paddingVertical: 20,
+    paddingHorizontal: 15,
+    marginBottom: 40,
+    marginTop: -10,
+    position: 'absolute',
+    bottom: 0,
+    width: windowWidth - 25
+  },
+  listResumen: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12
   }
 });
 

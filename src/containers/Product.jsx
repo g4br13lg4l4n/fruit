@@ -87,13 +87,13 @@ const Product = ({ navigation }) => {
 					<CustomButton
 						onPress={() => navigation.navigate('Home')}
 						title={'Agregar'}
-						styleButton={styles.greenBorderBtn}
+						styleButton={[styles.greenBorderBtn, { marginRight: 10}]}
 						styleText={styles.greenButtonText}
 					/>
 					<CustomButton
 						onPress={() => navigation.navigate('Home')}
 						title={'Comprar'}
-						styleButton={styles.greenBtn}
+						styleButton={[styles.greenBtn, { marginLeft: 10}]}
 						styleText={styles.whiteButtonText}
 					/>
 				</View>
