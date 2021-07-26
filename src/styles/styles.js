@@ -61,6 +61,11 @@ const styles = StyleSheet.create({
     height: 46,
     width: '100%'
   },
+  roundButton: {
+    width: 28,
+    height: 28,
+    borderRadius: 50
+  },
   redButtonText: {
     textAlign: 'center',
     paddingVertical: 12,
@@ -298,8 +303,8 @@ const styles = StyleSheet.create({
     marginTop: 12
   },
   productImage: {
-    width: 220,
     height: 200,
+    flex: 1
   },
   discriptionProductContainer: {
     marginTop: 10,
@@ -383,6 +388,10 @@ const styles = StyleSheet.create({
   /**
    * Checkout
    */
+  checkoutContainer: {
+    marginTop: 26,
+    position: 'relative'
+  },
   listChekoutProducts: {
     backgroundColor: white,
     borderRadius: 25,
@@ -397,7 +406,19 @@ const styles = StyleSheet.create({
   },
   priceOptionsContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+  },
+  removeProductBtn: {
+    position: 'absolute',
+    left: -5,
+    top: -12,
+    zIndex: 1
+  },
+  optionsItemContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: 80,
   }
 });
 
