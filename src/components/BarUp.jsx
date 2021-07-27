@@ -7,7 +7,6 @@ import {useRoute} from '@react-navigation/native';
 
 const BarUp = ({ title }) => {
     const route = useRoute();
-    console.log('route ---->', route.name);
     return(
         <View style={styles.barUpContainer}>
             <TouchableOpacity>
@@ -15,7 +14,11 @@ const BarUp = ({ title }) => {
             </TouchableOpacity>
             {title ? <Text style={styles.barUpTitle}> { title } </Text> : null}
             <TouchableOpacity>
-                <Icons icon={'userIcon'}/>
+            {
+                /** 
+                 * <Icons icon={'userIcon'}/>
+                */
+            }
             </TouchableOpacity>
         </View>
     );

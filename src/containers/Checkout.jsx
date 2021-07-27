@@ -10,8 +10,8 @@ const Checkout = ({ navigation }) => {
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
         <BarUp title={'Canasta de compras'} />
-        <View style={{ marginBottom: 240 }}>
-          <View style={[styles.containerScreen, styles.checkoutContainer]}>
+        <View style={[styles.containerScreen, { marginBottom: 240 }]}>
+          <View style={[styles.checkoutContainer]}>
             <View style={styles.removeProductBtn}>
               <RoundButton color={'#FF0036'} icon={'xIcon'} />
             </View>
@@ -41,7 +41,7 @@ const Checkout = ({ navigation }) => {
               </View>
             </View>
           </View>
-          <View style={[styles.containerScreen, styles.checkoutContainer]}>
+          <View style={[styles.checkoutContainer]}>
             <View style={styles.removeProductBtn}>
               <RoundButton color={'#FF0036'} icon={'xIcon'} />
             </View>
@@ -71,7 +71,7 @@ const Checkout = ({ navigation }) => {
               </View>
             </View>
           </View>
-          <View style={[styles.containerScreen, styles.checkoutContainer]}>
+          <View style={[styles.checkoutContainer]}>
             <View style={styles.removeProductBtn}>
               <RoundButton color={'#FF0036'} icon={'xIcon'} />
             </View>
@@ -100,28 +100,28 @@ const Checkout = ({ navigation }) => {
                 </View>
               </View>
             </View>
-          </View>          
+          </View>
         </View>
-        
+
       </ScrollView>
       <View style={[styles.containerScreen, styles.resumenContainer]}>
-          <View style={styles.listResumen}>
-            <Text style={styles.fontWeightBold}>Costo de envío</Text>
-            <Text>$0.00</Text>
-          </View>
-          <View style={styles.listResumen}>
-            <Text style={styles.fontWeightBold}>Subtotal</Text>
-            <Text>$74.00</Text>
-          </View>
-          <View style={styles.listResumen}>
-            <Text style={styles.fontWeightBold}>Total</Text>
-            <Text>$74.00</Text>
-          </View>
-          <CustomButton 
-            title={'Comprar'} 
-            styleButton={[styles.greenBtn]}
-						styleText={styles.whiteButtonText}/>
+        <View style={styles.listResumen}>
+          <Text style={styles.fontWeightBold}>Costo de envío</Text>
+          <Text>$0.00</Text>
         </View>
+        <View style={styles.listResumen}>
+          <Text style={styles.fontWeightBold}>Subtotal</Text>
+          <Text>$74.00</Text>
+        </View>
+        <View style={styles.listResumen}>
+          <Text style={styles.fontWeightBold}>Total</Text>
+          <Text>$74.00</Text>
+        </View>
+        <CustomButton
+          title={'Comprar'}
+          styleButton={[styles.greenBtn]}
+          styleText={styles.whiteButtonText} />
+      </View>
     </SafeAreaView>
   );
 }

@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   containerScreen: {
+    paddingBottom: 20,
     marginTop: 8,
     marginHorizontal: marginHorizontal
   },
@@ -181,8 +182,6 @@ const styles = StyleSheet.create({
       width: 0,
       height: 9,
     },
-    shadowOpacity: 0.50,
-    shadowRadius: 12.35,
     elevation: 5
   },
   tabNavigatorActiveText: {
@@ -454,11 +453,17 @@ const styles = StyleSheet.create({
   itemMenuContainer: {
     backgroundColor: 'white', 
     borderRadius: 16, 
-    paddingVertical: 16, 
+    paddingVertical: 18, 
     paddingHorizontal: 20, 
     flexDirection: 'row', 
     alignItems: 'center', 
-    position: 'relative'
+    position: 'relative',
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 9,
+    },
+    elevation: 5
   },
   titleItemMenuContainer: {
     fontSize: 16, 
