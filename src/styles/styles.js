@@ -298,10 +298,11 @@ const styles = StyleSheet.create({
    */
   productImageContainer: {
     alignItems: 'center',
-    marginTop: 12
+    marginTop: 12,
   },
   productImage: {
     height: 200,
+    width: windowWidth - 120,
     flex: 1
   },
   discriptionProductContainer: {
