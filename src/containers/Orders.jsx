@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeAreaView, ScrollView , Text} from 'react-native';
+import { View, SafeAreaView, ScrollView , Text, Image} from 'react-native';
 import BarUp from '../components/BarUp';
 import TabNavigator from '../components/TabNavigator';
 import styles from '../styles/styles';
@@ -9,8 +9,14 @@ const Orders = ({ navigation }) => {
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
         <BarUp />
-        <View>
-          <Text>Ordenes</Text>
+        <View style={[styles.containerScreen]}>
+          <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Image
+              style={{width: 200, height: 200}}
+              source={require('../../assets/apple.png')}
+            />
+            <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#444343' }}>Aún no has realizado ningún pedido</Text>
+          </View>
         </View>
       </ScrollView>
       <TabNavigator navigation={navigation} />

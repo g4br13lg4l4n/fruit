@@ -437,6 +437,43 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 12
+  },
+  /**
+   * ItemMenu component
+   */
+  supportContainer: {
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center'
+  },
+  needHelpTitle: {
+    fontWeight: 'bold', 
+    fontSize: 24, 
+    color: '#444343'
+  },
+  itemMenuContainer: {
+    backgroundColor: 'white', 
+    borderRadius: 16, 
+    paddingVertical: 16, 
+    paddingHorizontal: 20, 
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    position: 'relative'
+  },
+  titleItemMenuContainer: {
+    fontSize: 16, 
+    fontWeight: 'bold', 
+    color: '#444343'
+  },
+  textItemMenuContainer: {
+    fontSize: 14, 
+    color: '#7B7B7B', 
+    fontWeight: 'bold', 
+    marginTop: 2
+  },
+  iconItemMenuContainer: {
+    position: 'absolute', 
+    right: 20
   }
 });
 

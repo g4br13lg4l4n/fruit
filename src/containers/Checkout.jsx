@@ -33,9 +33,9 @@ const Checkout = ({ navigation }) => {
                     <Text style={[styles.fontWeightBold, { fontSize: 16 }]}>$18.50</Text>
                   </View>
                   <View style={styles.optionsItemContainer}>
-                    <RoundButton color={'#6FCF97'} icon={'plusIcon'} />
-                    <Text>1</Text>
                     <RoundButton color={'#6FCF97'} icon={'minusIcon'} />
+                    <Text>1</Text>
+                    <RoundButton color={'#6FCF97'} icon={'plusIcon'} />
                   </View>
                 </View>
               </View>
@@ -63,9 +63,9 @@ const Checkout = ({ navigation }) => {
                     <Text style={[styles.fontWeightBold, { fontSize: 16 }]}>$18.50</Text>
                   </View>
                   <View style={styles.optionsItemContainer}>
-                    <RoundButton color={'#6FCF97'} icon={'plusIcon'} />
-                    <Text>1</Text>
                     <RoundButton color={'#6FCF97'} icon={'minusIcon'} />
+                    <Text>1</Text>
+                    <RoundButton color={'#6FCF97'} icon={'plusIcon'} />
                   </View>
                 </View>
               </View>
@@ -93,9 +93,9 @@ const Checkout = ({ navigation }) => {
                     <Text style={[styles.fontWeightBold, { fontSize: 16 }]}>$18.50</Text>
                   </View>
                   <View style={styles.optionsItemContainer}>
-                    <RoundButton color={'#6FCF97'} icon={'plusIcon'} />
-                    <Text>1</Text>
                     <RoundButton color={'#6FCF97'} icon={'minusIcon'} />
+                    <Text>1</Text>
+                    <RoundButton color={'#6FCF97'} icon={'plusIcon'} />
                   </View>
                 </View>
               </View>
