@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, SafeAreaView, ScrollView, Text, TextInput } from 'react-native';
 import BarUp from '../components/BarUp';
 import Categories from '../components/Categories';
 import ListProducts from '../components/ListProducts';
 import TabNavigator from '../components/TabNavigator';
 import styles from '../styles/styles';
+import AppContext from '../context/AppContext';
 
 const Home = ({ navigation }) => {
-  const [text, onChangeText] = React.useState("Useless Text");
-  const [number, onChangeNumber] = React.useState(null);
-
+  const { inputFind, filterProducts } = useContext(AppContext);
   return (
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
@@ -21,8 +20,8 @@ const Home = ({ navigation }) => {
           </View>
           <TextInput
             style={styles.inputSearch}
-            onChangeText={onChangeNumber}
-            value={number}
+            onChangeText={(inputFind) => filterProducts(inputFind)}
+            value={inputFind}
             placeholderTextColor="#A8A7A7"
             placeholder="Buscar producto"
           />

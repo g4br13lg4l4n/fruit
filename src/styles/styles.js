@@ -253,6 +253,10 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
   },
+  cardItemProductImage: {
+    width: 82,
+    height: 70,
+  },
   cardCategoryText: {
     color: gray,
     marginTop: -18,
