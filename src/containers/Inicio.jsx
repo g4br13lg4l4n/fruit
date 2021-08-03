@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Text, View, ImageBackground, ToastAndroid } from 'react-native';
+import { Text, View, ImageBackground } from 'react-native';
 import CustomButton from '../components/CustomButton';
 import styles from '../styles/styles';
 import LogIn from '../components/LogIn';
@@ -10,11 +10,15 @@ import Icons from '../components/Icons';
 import useLogin from '../hooks/useLogin';
 
 const Inicio = ({ navigation }) => {
-	const { state } = useContext(AppContext);
+	const { state, setIsLogin } = useContext(AppContext);
     const { inicioPage, email, password } = state;
 	
 	const login = () => {
-		useLogin(navigation, email, password);
+		useLogin(navigation, email, password)
+		.then(resp => {
+			setIsLogin(true);
+		})
+		.catch(err =>{});
 	}
 	const register = () => {
 

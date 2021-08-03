@@ -11,6 +11,13 @@ const useInitialState = () => {
     });
   }
 
+  const setIsLogin = isLogin => {
+    setState({
+      ...state,
+      isLogin
+    });
+  }
+
   const filterProducts = word => {
     setState({
       ...state,
@@ -50,6 +57,7 @@ const useInitialState = () => {
   return {
     setInicioPage,
     filterProducts,
+    setIsLogin,
     setPassword,
     setEmail,
     setName,

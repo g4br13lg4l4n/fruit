@@ -11,13 +11,16 @@ const LogIn = () => {
 				style={styles.textInput}
 				placeholder="Email o usuario"
 				keyboardType="email-address"
+				autoCompleteType={'email'}
 				value={email}
 				onChangeText={(email) => setEmail(email)}
 				placeholderTextColor="#A8A7A7"
 				selectionColor={'#FF0036'}
+				autoFocus={true}
 			/>
 			<TextInput
 				style={styles.textInput}
+				autoCompleteType={'password'}
 				placeholder="Contraseña"
 				secureTextEntry={true}
 				value={password}

@@ -2,6 +2,8 @@ export default {
     isLogin: false,
     inputFind: '',
     inicioPage: 'LogIn',
+    email: '',
+    password: '',
     productsFiltered: [],
     products: [
       {

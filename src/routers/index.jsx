@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Inicio from '../containers/Inicio';
@@ -12,8 +12,8 @@ import useInitalState from '../hooks/useInitialState';
 import AppContext from '../context/AppContext';
 
 export default function NavigationRoutes() {
+    const { isLogin } = useContext(AppContext);
     const initialState = useInitalState();
-    const isLogin = false;
     const Stack = createStackNavigator()
     const options = {
         screenOptions: {
