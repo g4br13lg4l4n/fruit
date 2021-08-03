@@ -19,9 +19,41 @@ const useInitialState = () => {
     });
   } 
 
+  const setPassword = password => {
+    setState({
+      ...state,
+      password,
+    });
+  } 
+
+  const setEmail = email => {
+    setState({
+      ...state,
+      email
+    });
+  }
+
+  const setName = name => {
+    setState({
+      ...state,
+      name
+    });
+  }
+
+  const setPhone = phone => {
+    setState({
+      ...state,
+      phone
+    })
+  }
+
   return {
     setInicioPage,
     filterProducts,
+    setPassword,
+    setEmail,
+    setName,
+    setPhone,
     state
   };
 };

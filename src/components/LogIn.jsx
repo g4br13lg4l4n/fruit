@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Text, TextInput, View} from 'react-native';
 import styles from '../styles/styles';
+import AppContext from '../context/AppContext';
 
 const LogIn = () => {
+	const { email, password, setPassword, setEmail } = useContext(AppContext);
 	return (
 		<View style={styles.loginContent}>
 			<TextInput
 				style={styles.textInput}
 				placeholder="Email o usuario"
 				keyboardType="email-address"
+				value={email}
+				onChangeText={(email) => setEmail(email)}
 				placeholderTextColor="#A8A7A7"
 				selectionColor={'#FF0036'}
 			/>
@@ -16,8 +20,10 @@ const LogIn = () => {
 				style={styles.textInput}
 				placeholder="Contraseña"
 				secureTextEntry={true}
+				value={password}
+				onChangeText={(password) => setPassword(password)}
 				placeholderTextColor="#A8A7A7"
-				selectionColor={'#FF0036'} 
+				selectionColor={'#FF0036'}
 			/>
 			<View style={styles.lostPasswordLink}>
 				<Text style={styles.textLostPassword}>Olvidé mi contraseña</Text>

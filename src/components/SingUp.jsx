@@ -1,13 +1,28 @@
-import React from 'react';
-import { View, Text, TextInput } from 'react-native';
+import React, { useContext } from 'react';
+import { View, TextInput } from 'react-native';
 import styles from '../styles/styles';
+import AppContext from '../context/AppContext';
 
 const SingUp = () => {
+	const { user, password, setPassword, setUser } = useContext(AppContext);
   return (
     <View style={styles.loginContent}>
 			<TextInput
 				style={styles.textInput}
-				placeholder="Email o usuario"
+				placeholder="Nombre completo"
+				placeholderTextColor="#A8A7A7"
+				selectionColor={'#FF0036'}
+			/>
+			<TextInput
+				style={styles.textInput}
+				placeholder="Teléfono"
+				keyboardType="numeric"
+				placeholderTextColor="#A8A7A7"
+				selectionColor={'#FF0036'}
+			/>
+			<TextInput
+				style={styles.textInput}
+				placeholder="Email"
 				keyboardType="email-address"
 				placeholderTextColor="#A8A7A7"
 				selectionColor={'#FF0036'}
@@ -19,16 +34,13 @@ const SingUp = () => {
 				placeholderTextColor="#A8A7A7"
 				selectionColor={'#FF0036'} 
 			/>
-      <TextInput
+      		<TextInput
 				style={styles.textInput}
 				placeholder="Confirmar contraseña"
 				secureTextEntry={true}
 				placeholderTextColor="#A8A7A7"
 				selectionColor={'#FF0036'} 
 			/>
-			<View style={styles.lostPasswordLink}>
-				<Text style={styles.textLostPassword}>Olvidé mi contraseña</Text>
-			</View>
 		</View>
   );
 }
