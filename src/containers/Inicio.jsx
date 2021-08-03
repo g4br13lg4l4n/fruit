@@ -8,26 +8,13 @@ import AppContext from '../context/AppContext';
 import InicioMenu from '../components/InicioMenu';
 import Icons from '../components/Icons';
 import useLogin from '../hooks/useLogin';
-import Api from '../utils/Api';
-import Params from '../utils/params';
 
 const Inicio = ({ navigation }) => {
 	const { state } = useContext(AppContext);
     const { inicioPage, email, password } = state;
-	const API = `${Params.dev.base}users/auth`;
-
+	
 	const login = () => {
-		Api.post(API, { email, password })
-		.then(resp => {
-			if(!resp.hasOwnProperty('message')) {
-				navigation.navigate('Home');
-			} else {
-				ToastAndroid.show("Usuario o contraseña incorrecta", ToastAndroid.SHORT);
-			}
-		})
-		.catch(err => {
-			console.log('err => ', err.status)
-		})
+		useLogin(navigation, email, password);
 	}
 	const register = () => {
 

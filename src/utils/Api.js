@@ -10,10 +10,10 @@ const Api = {
                 body: JSON.stringify(params)
             })
             .then(res => {
-                if(typeof res === 'object') {
-                    reject(res);
-                } else {
+                if(res.status === 200 || res.status === 201) {
                     resolve(res.json());
+                } else {
+                    reject(res);
                 }
             })
             .catch(err => {

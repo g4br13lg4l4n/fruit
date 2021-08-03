@@ -1,6 +1,6 @@
 const Params = {
     dev: {
-        base: 'https://21b510fa3902.ngrok.io/api/v1/'
+        base: 'https://230c385c620c.ngrok.io/api/v1/'
     }
 };
 

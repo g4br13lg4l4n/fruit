@@ -1,17 +1,20 @@
-import { useState, useEffect } from 'react';
+import { ToastAndroid } from 'react-native';
 import Params from '../utils/params';
 import Api from '../utils/Api';
 
-const useLogin = credentials => {
-  const [map, setMap] = useState({});
+const useLogin = (navigation, email, password) => {
   const API = `${Params.dev.base}users/auth`;
-
-  useEffect(async () => {
-    const json = await Api.post(API, credentials);
-    console.log('json ----->', json);
-    setMap(json);
-  }, []);
-  return map;
+  Api.post(API, { email, password })
+    .then(resp => {
+      navigation.navigate('Home');
+    })
+    .catch(err => {
+      if (err.status === 401) {
+        ToastAndroid.show("Usuario o contraseña incorrecta", ToastAndroid.SHORT);
+      } else {
+        ToastAndroid.show("Error en servicio, por favor intente más tarde", ToastAndroid.LONG);
+      }
+    })
 };
 
 export default useLogin;
