@@ -27,7 +27,6 @@ const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
-        <BarUp />
         <View style={styles.containerScreen}>
           <View style={{ marginBottom: 18 }}>
             <Text style={styles.titleHome}>Elige el producto</Text>

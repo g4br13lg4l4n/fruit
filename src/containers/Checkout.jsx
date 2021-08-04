@@ -9,7 +9,7 @@ const Checkout = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
-        <BarUp title={'Canasta de compras'} />
+        <BarUp navigation={navigation} title={'Canasta de compras'} />
         <View style={[styles.containerScreen, { marginBottom: 240 }]}>
           <View style={[styles.checkoutContainer]}>
             <View style={styles.removeProductBtn}>

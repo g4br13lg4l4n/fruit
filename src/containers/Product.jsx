@@ -11,7 +11,7 @@ const Product = ({ navigation }) => {
 	return (
 		<SafeAreaView style={styles.containerSafeArea}>
 			<ScrollView style={styles.scrollView}>
-				<BarUp />
+				<BarUp navigation={navigation} />
 				<View style={[styles.containerScreen]}>
 					<View style={styles.productImageContainer}>
 						<Image

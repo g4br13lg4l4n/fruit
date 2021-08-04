@@ -8,7 +8,7 @@ const Orders = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
-        <BarUp />
+        <BarUp navigation={navigation} />
         <View style={[styles.containerScreen]}>
           <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
             <Image

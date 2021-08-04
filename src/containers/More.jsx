@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, SafeAreaView, ScrollView, Text, Image } from 'react-native';
+import { View, SafeAreaView, ScrollView } from 'react-native';
 import BarUp from '../components/BarUp';
 import ItemMenu from '../components/ItemMenu';
 import TabNavigator from '../components/TabNavigator';
@@ -9,7 +9,7 @@ const More = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
-        <BarUp />
+        <BarUp navigation={navigation} />
         <View style={[styles.containerScreen]}>
           <View style={{ marginTop: 30 }}>
             <ItemMenu
@@ -30,6 +30,10 @@ const More = ({ navigation }) => {
           <View style={{ marginTop: 30 }}>
             <ItemMenu
               text={'Políticas de privacidad'} />
+          </View>
+          <View style={{ marginTop: 30 }}>
+            <ItemMenu
+              text={'Cerrar sesión'} />
           </View>
         </View>
       </ScrollView>
