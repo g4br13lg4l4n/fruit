@@ -6,8 +6,23 @@ import ListProducts from '../components/ListProducts';
 import TabNavigator from '../components/TabNavigator';
 import styles from '../styles/styles';
 import AppContext from '../context/AppContext';
+import { CommonActions } from '@react-navigation/native';
+
+const resetNavigator = (navigation) => {
+  setTimeout(() => {
+    navigation.dispatch(state => {
+      const routes = state.routes.filter(r => r.name !== 'LoadingScreen');
+      return CommonActions.reset({
+        ...state,
+        routes,
+        index: routes.length - 1,
+      });
+    });
+  }, 1000);
+}
 
 const Home = ({ navigation }) => {
+  resetNavigator(navigation);
   const { inputFind, filterProducts } = useContext(AppContext);
   return (
     <SafeAreaView style={styles.containerSafeArea}>

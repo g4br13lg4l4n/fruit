@@ -8,15 +8,16 @@ import AppContext from '../context/AppContext';
 import InicioMenu from '../components/InicioMenu';
 import Icons from '../components/Icons';
 import useLogin from '../hooks/useLogin';
+import StoreData from '../utils/StoreData';
 
 const Inicio = ({ navigation }) => {
-	const { state, setIsLogin } = useContext(AppContext);
+	const { state } = useContext(AppContext);
     const { inicioPage, email, password } = state;
 	
 	const login = () => {
 		useLogin(navigation, email, password)
 		.then(resp => {
-			setIsLogin(true);
+			StoreData.setToken(resp.token);
 		})
 		.catch(err =>{});
 	}

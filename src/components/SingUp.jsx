@@ -13,7 +13,6 @@ const SingUp = () => {
 				placeholderTextColor="#A8A7A7"
 				autoCompleteType={'name'}
 				selectionColor={'#FF0036'}
-				dataDetectorTypes={'name'}
 				autoFocus={true}
 			/>
 			<TextInput
@@ -22,7 +21,6 @@ const SingUp = () => {
 				keyboardType="numeric"
 				maxLength={10}
 				autoCompleteType={'tel'}
-				dataDetectorTypes={'phoneNumber'}
 				placeholderTextColor="#A8A7A7"
 				selectionColor={'#FF0036'}
 			/>
@@ -31,7 +29,6 @@ const SingUp = () => {
 				placeholder="Email"
 				keyboardType="email-address"
 				autoCompleteType={'email'}
-				dataDetectorTypes={'email'}
 				placeholderTextColor="#A8A7A7"
 				selectionColor={'#FF0036'}
 			/>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Inicio from '../containers/Inicio';
@@ -10,21 +10,22 @@ import Product from '../containers/Product';
 import Checkout from '../containers/Checkout';
 import useInitalState from '../hooks/useInitialState';
 import AppContext from '../context/AppContext';
+import LoadingScreen from '../containers/LoadingScreen';
 
-export default function NavigationRoutes() {
-    const { isLogin } = useContext(AppContext);
+export default function NavigationRoutes({ screen }) {
     const initialState = useInitalState();
-    const Stack = createStackNavigator()
+    const Stack = createStackNavigator();
     const options = {
         screenOptions: {
             headerShown: false,
         },
-        initialRouteName: isLogin ? "Home" : "Inicio"
+        initialRouteName: 'LoadingScreen'
     }
     return (
         <AppContext.Provider value={initialState}>
             <NavigationContainer>
                 <Stack.Navigator {...options}>
+                    <Stack.Screen name="LoadingScreen" component={LoadingScreen} />
                     <Stack.Screen name="Inicio" component={Inicio} />
                     <Stack.Screen name="Home" component={Home} />
                     <Stack.Screen name="Orders" component={Orders} />

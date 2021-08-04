@@ -10,7 +10,7 @@ const useLogin = (navigation, email, password) => {
       .then(resp => {
         navigation.navigate('Home');
         navigation.dispatch(state => {
-          const routes = state.routes.filter(r => r.name !== 'Inicio');
+          const routes = state.routes.filter(r => r.name !== 'Inicio' && r.name !== 'LoadingScreen');
           return CommonActions.reset({
             ...state,
             routes,
