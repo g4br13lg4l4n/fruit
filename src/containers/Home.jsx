@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { View, SafeAreaView, ScrollView, Text, TextInput } from 'react-native';
-import BarUp from '../components/BarUp';
 import Categories from '../components/Categories';
 import ListProducts from '../components/ListProducts';
 import TabNavigator from '../components/TabNavigator';

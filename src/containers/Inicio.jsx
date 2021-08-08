@@ -9,10 +9,11 @@ import InicioMenu from '../components/InicioMenu';
 import Icons from '../components/Icons';
 import useLogin from '../hooks/useLogin';
 import StoreData from '../utils/StoreData';
+import useSingUp from '../hooks/useSingUp';
 
 const Inicio = ({ navigation }) => {
 	const { state } = useContext(AppContext);
-    const { inicioPage, email, password } = state;
+    const { inicioPage, email, password, name, phone } = state;
 	
 	const login = () => {
 		useLogin(navigation, email, password)
@@ -22,8 +23,13 @@ const Inicio = ({ navigation }) => {
 		.catch(err =>{});
 	}
 	const register = () => {
-
+		useSingUp(navigation, { email, password, name, phone })
+		.then(resp => {
+			console.log('resp --->', resp);
+		})
+		.catch(err => {})
 	}
+
 
 	const foot = (page) => {
 		if(page === 'LogIn') {

@@ -1,11 +1,22 @@
 import React from 'react';
-import { View, SafeAreaView, ScrollView } from 'react-native';
+import { View, SafeAreaView, ScrollView, TouchableOpacity } from 'react-native';
 import BarUp from '../components/BarUp';
 import ItemMenu from '../components/ItemMenu';
 import TabNavigator from '../components/TabNavigator';
+import resetRouter from '../hooks/resetRouter';
 import styles from '../styles/styles';
+import StoreData from '../utils/StoreData';
 
 const More = ({ navigation }) => {
+  const closeSesion = () => {
+    StoreData.removeToken()
+      .then(resp => {
+        resetRouter(navigation, 'Inicio');
+      })
+      .catch(err => {
+        console.log('err =>', err);
+      })
+  }
   return (
     <SafeAreaView style={styles.containerSafeArea}>
       <ScrollView style={styles.scrollView}>
@@ -32,8 +43,10 @@ const More = ({ navigation }) => {
               text={'Políticas de privacidad'} />
           </View>
           <View style={{ marginTop: 30 }}>
-            <ItemMenu
-              text={'Cerrar sesión'} />
+            <TouchableOpacity onPress={() => closeSesion()}>
+              <ItemMenu
+                text={'Cerrar sesión'} />
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

@@ -5,7 +5,7 @@ import Icons from "./Icons";
 
 const ItemMenu = ({icon, title, text }) => {
     return(
-        <TouchableOpacity style={styles.itemMenuContainer}>
+        <View style={styles.itemMenuContainer}>
             {icon ? <Icons icon={icon} w={33} h={33}/>: null}
             <View style={{ marginLeft: 12 }}>
                 {title ? <Text style={styles.titleItemMenuContainer}>{title}</Text>: null}
@@ -14,7 +14,7 @@ const ItemMenu = ({icon, title, text }) => {
             <View style={styles.iconItemMenuContainer}>
                 <Icons icon={'rightIcon'}/>
             </View>
-        </TouchableOpacity>
+        </View>
     );
 }
 

@@ -1,22 +1,14 @@
 import { ToastAndroid } from 'react-native';
-import { CommonActions } from '@react-navigation/native';
 import Params from '../utils/params';
 import Api from '../utils/Api';
+import resetRouter from './resetRouter';
 
 const useLogin = (navigation, email, password) => {
   const API = `${Params.dev.base}users/auth`;
   return new Promise((resolve, reject) => {
     Api.post(API, { email, password })
       .then(resp => {
-        navigation.navigate('Home');
-        navigation.dispatch(state => {
-          const routes = state.routes.filter(r => r.name !== 'Inicio' && r.name !== 'LoadingScreen');
-          return CommonActions.reset({
-            ...state,
-            routes,
-            index: routes.length - 1,
-          });
-        });
+        resetRouter(navigation, 'Home');
         resolve(resp);
       })
       .catch(err => {

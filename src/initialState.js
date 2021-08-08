@@ -4,6 +4,7 @@ export default {
     inicioPage: 'LogIn',
     email: '',
     password: '',
+    phone: '',
     productsFiltered: [],
     products: [
       {

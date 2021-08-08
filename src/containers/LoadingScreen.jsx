@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native';
 import React, { Component } from 'react';
 import StoreData from '../utils/StoreData';
+import resetRouter from '../hooks/resetRouter';
 
 class LoadingScreen extends Component {
     constructor(props) {
@@ -10,13 +11,13 @@ class LoadingScreen extends Component {
         StoreData.getToken()
             .then(token => {
                 if (token) {
-                    this.props.navigation.navigate('Home');
+                    resetRouter(this.props.navigation, 'Home');
                 } else {
-                    this.props.navigation.navigate('Inicio')
+                    resetRouter(this.props.navigation, 'Inicio');
                 }
             })
             .catch(err => {
-                this.props.navigation.navigate('Inicio')
+                resetRouter(this.props.navigation, 'Inicio');
             })
     }
     render() {

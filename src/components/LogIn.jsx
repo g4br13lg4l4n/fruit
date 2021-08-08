@@ -12,6 +12,7 @@ const LogIn = () => {
 				placeholder="Email o usuario"
 				keyboardType="email-address"
 				autoCompleteType={'email'}
+				autoCapitalize={"none"}
 				value={email}
 				onChangeText={(email) => setEmail(email)}
 				placeholderTextColor="#A8A7A7"
