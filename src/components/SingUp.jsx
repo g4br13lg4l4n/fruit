@@ -39,7 +39,7 @@ const SingUp = () => {
 			/>
 			<TextInput
 				style={styles.textInput}
-				placeholder="Email"
+				placeholder="Correo electronico"
 				autoCapitalize={"none"}
 				keyboardType="email-address"
 				autoCompleteType={'email'}

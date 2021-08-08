@@ -9,7 +9,7 @@ const LogIn = () => {
 		<View style={styles.loginContent}>
 			<TextInput
 				style={styles.textInput}
-				placeholder="Email o usuario"
+				placeholder="Correo o usuario"
 				keyboardType="email-address"
 				autoCompleteType={'email'}
 				autoCapitalize={"none"}

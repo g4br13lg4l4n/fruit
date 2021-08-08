@@ -12,10 +12,28 @@ const useSingUp = (navigation, form) => {
         resolve(resp);
       })
       .catch(err => {
-        if (err.status === 401) {
-          ToastAndroid.show("Usuario o contraseña incorrecta", ToastAndroid.SHORT);
-        } else {
-          ToastAndroid.show("Error en servicio, por favor intente más tarde", ToastAndroid.LONG);
+        switch (err.status) {
+          case 401:
+            ToastAndroid.show("Usuario o contraseña incorrecta", ToastAndroid.SHORT);
+            break;
+          case 409:
+            err.json().then(res => {
+              if(res.error.code === 11000) {
+                Object.entries(res.error.keyValue).forEach((el, ky) => {
+                  const message = `El ${el[ky]} ${res.error.keyValue[el[ky]]} ya es utilizado`
+                  ToastAndroid.show(message, ToastAndroid.SHORT);
+                });
+              } else {
+                Object.entries(res.error).forEach((element, key) => {
+                  ToastAndroid.show(res.error[element[key]].message, ToastAndroid.SHORT);
+                })
+              }
+            })
+            .catch(errr => {})
+            break;
+          default:
+            ToastAndroid.show("Error en servicio, por favor intente más tarde", ToastAndroid.LONG);
+            break;
         }
         reject(err);
       })
