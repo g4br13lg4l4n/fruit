@@ -1,6 +1,7 @@
 export default {
     isLogin: false,
     inputFind: '',
+    category: 'Frutas',
     inicioPage: 'LogIn',
     email: '',
     password: '',

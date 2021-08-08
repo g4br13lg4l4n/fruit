@@ -25,7 +25,7 @@ const Inicio = ({ navigation }) => {
 	const register = () => {
 		useSingUp(navigation, { email, password, name, phone })
 		.then(resp => {
-			console.log('resp --->', resp);
+			StoreData.setToken(resp.token);
 		})
 		.catch(err => {})
 	}

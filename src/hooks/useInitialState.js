@@ -51,7 +51,14 @@ const useInitialState = () => {
     setState({
       ...state,
       phone
-    })
+    });
+  }
+
+  const setCategory = category => {
+    setState({
+      ...state,
+      category
+    });
   }
 
   return {
@@ -62,6 +69,7 @@ const useInitialState = () => {
     setEmail,
     setName,
     setPhone,
+    setCategory,
     state
   };
 };

@@ -6,46 +6,6 @@ import Icons from './Icons';
 
 const TabNavigator = ({ navigation }) => {
     const route = useRoute();
-    console.log('Tap component', route.name);
-
-    const navigationOptionsActive = () => {
-        let options = {};
-        switch (route.name) {
-            case 'Home':
-                options = {
-                    icon: 'homeActiveIcon'
-                }
-                break;
-            case 'Orders':
-                options = {
-                    icon: 'checkActiveIcon'
-                }
-                break;
-            case 'Checkout':
-                options = {
-                    icon: 'basketActiveIcon'
-                }
-                break;
-            case 'Support':
-                options = {
-                    icon: 'helpActiveIcon'
-                }
-                break;
-            case 'More':
-                options = {
-                    icon: 'settingsActiveIcon'
-                }
-                break;
-        
-            default:
-                options = {
-                    icon: 'homeActiveIcon'
-                }
-                break;   
-        }
-        return options;
-    }
-
     return (
         <View style={styles.tabNavigationContainer}>
             <TouchableOpacity 
