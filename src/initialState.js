@@ -5,7 +5,9 @@ export default {
     inicioPage: 'LogIn',
     hidePass: true,
     email: '',
+    emailRequired: false,
     password: '',
+    passwordRequired: false,
     phone: '',
     productsFiltered: [],
     products: [

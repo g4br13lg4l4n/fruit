@@ -27,16 +27,20 @@ const useInitialState = () => {
   } 
 
   const setPassword = password => {
+    const flag = !password || password.length === 0 ? true : false;
     setState({
       ...state,
       password,
+      passwordRequired: flag
     });
   } 
 
   const setEmail = email => {
+    const flag = !email || email.length === 0 ? true : false;
     setState({
       ...state,
-      email
+      email,
+      emailRequired: flag
     });
   }
 
@@ -62,11 +66,24 @@ const useInitialState = () => {
   }
 
   const setHidePass = hidePass => {
-    console.log('hidePass ---->', hidePass);
     setState({
       ...state,
       hidePass
     });
+  }
+
+  const setEmailRequired = emailRequired => {
+    setState({
+      ...state,
+      emailRequired
+    })
+  }
+
+  const setPasswordRequired = passwordRequired => {
+    setState({
+      ...state,
+      passwordRequired
+    })
   }
 
   return {
@@ -79,6 +96,8 @@ const useInitialState = () => {
     setPhone,
     setCategory,
     setHidePass,
+    setEmailRequired,
+    setPasswordRequired,
     state
   };
 };

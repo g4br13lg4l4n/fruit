@@ -200,7 +200,11 @@ const styles = StyleSheet.create({
     right: 0, 
     top: 12
   },
-
+  textRequiredInput: {
+    color: 'red', 
+    fontSize: 12, 
+    marginTop: -8
+  },
   /**
    * Home Screen
    */
