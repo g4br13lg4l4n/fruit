@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import { View, TextInput } from 'react-native';
+import { View, TextInput, TouchableOpacity } from 'react-native';
 import styles from '../styles/styles';
 import AppContext from '../context/AppContext';
+import Icons from './Icons';
 
 const SingUp = () => {
 	const { 
+		state,
 		email,
 		setEmail,
 		password, 
@@ -12,8 +14,11 @@ const SingUp = () => {
 		name,
 		setName,
 		phone,
-		setPhone
+		setPhone,
+		setHidePass
 	} = useContext(AppContext);
+
+	let { hidePass } = state;
 	return (
 		<View style={styles.loginContent}>
 			<TextInput
@@ -48,15 +53,24 @@ const SingUp = () => {
 				value={email}
 				onChangeText={(email) => setEmail(email)}
 			/>
-			<TextInput
-				style={styles.textInput}
-				placeholder="Contraseña"
-				secureTextEntry={true}
-				placeholderTextColor="#A8A7A7"
-				selectionColor={'#FF0036'}
-				value={password}
-				onChangeText={(password) => setPassword(password)}
-			/>
+			<View style={styles.positionRelative}>
+				<TextInput
+					style={styles.textInput}
+					placeholder="Contraseña"
+					secureTextEntry={hidePass}
+					placeholderTextColor="#A8A7A7"
+					selectionColor={'#FF0036'}
+					value={password}
+					onChangeText={(password) => setPassword(password)}
+				/>
+				<TouchableOpacity
+					style={styles.eyePassword} 
+					onPress={() => setHidePass(!hidePass)}>
+					<Icons
+						icon={hidePass ? 'closeEyeIcon' : 'openEyeIcon'}
+					/>
+				</TouchableOpacity>
+			</View>
 		</View>
 	);
 }

@@ -5,7 +5,15 @@ import AppContext from '../context/AppContext';
 import Icons from './Icons';
 
 const LogIn = () => {
-	const { state, email, password, setPassword, setEmail, setHidePass } = useContext(AppContext);
+	const { 
+		state, 
+		email, 
+		password, 
+		setPassword, 
+		setEmail, 
+		setHidePass 
+	} = useContext(AppContext);
+	
 	let { hidePass } = state;
 	return (
 		<View style={styles.loginContent}>
@@ -21,7 +29,7 @@ const LogIn = () => {
 				selectionColor={'#FF0036'}
 				autoFocus={true}
 			/>
-			<View style={{ position: 'relative' }}>
+			<View style={styles.positionRelative}>
 				<TextInput
 					style={styles.textInput}
 					autoCompleteType={'password'}

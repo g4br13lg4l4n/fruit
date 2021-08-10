@@ -46,6 +46,9 @@ const styles = StyleSheet.create({
   fontWeightBold: {
     fontWeight: 'bold'
   },
+  positionRelative: {
+    position: 'relative'
+  },
   textInput: {
     color: black,
     height: 40,
