@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import { Text, TextInput, View} from 'react-native';
+import { Text, TextInput, View, TouchableOpacity} from 'react-native';
 import styles from '../styles/styles';
 import AppContext from '../context/AppContext';
+import Icons from './Icons';
 
 const LogIn = () => {
-	const { email, password, setPassword, setEmail } = useContext(AppContext);
+	const { state, email, password, setPassword, setEmail, setHidePass } = useContext(AppContext);
+	let { hidePass } = state;
 	return (
 		<View style={styles.loginContent}>
 			<TextInput
@@ -19,16 +21,26 @@ const LogIn = () => {
 				selectionColor={'#FF0036'}
 				autoFocus={true}
 			/>
-			<TextInput
-				style={styles.textInput}
-				autoCompleteType={'password'}
-				placeholder="Contraseña"
-				secureTextEntry={true}
-				value={password}
-				onChangeText={(password) => setPassword(password)}
-				placeholderTextColor="#A8A7A7"
-				selectionColor={'#FF0036'}
-			/>
+			<View style={{ position: 'relative' }}>
+				<TextInput
+					style={styles.textInput}
+					autoCompleteType={'password'}
+					placeholder="Contraseña"
+					secureTextEntry={hidePass}
+					value={password}
+					onChangeText={(password) => setPassword(password)}
+					placeholderTextColor="#A8A7A7"
+					selectionColor={'#FF0036'}
+				/>
+				<TouchableOpacity
+					style={styles.eyePassword} 
+					onPress={() => setHidePass(!hidePass)}>
+					<Icons
+						icon={hidePass ? 'closeEyeIcon' : 'openEyeIcon'}
+					/>
+				</TouchableOpacity>
+			</View>
+		
 			<View style={styles.lostPasswordLink}>
 				<Text style={styles.textLostPassword}>Olvidé mi contraseña</Text>
 			</View>

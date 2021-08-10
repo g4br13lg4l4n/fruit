@@ -115,5 +115,15 @@ export default {
     </svg>`,
     phoneIcon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M16.1627 14.3603L14.8581 15.665C13.2887 14.9326 11.9404 14.0421 10.9443 13.0557C9.45631 11.5822 8.66065 9.98857 8.33504 9.14197L9.63971 7.8373C9.99996 7.47704 9.99996 6.89295 9.63971 6.53269L6.3782 3.27118C6.01794 2.91092 5.43 2.90583 5.08267 3.27856C3.09443 5.41218 0.651098 9.28551 7.6828 16.3172C14.7145 23.3489 18.5878 20.9055 20.7214 18.9174C21.0942 18.57 21.0891 17.9821 20.7288 17.6218L17.4673 14.3603C17.1071 14.0001 16.523 14.0001 16.1627 14.3603Z" stroke="#4A4A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>`,
+    closeEyeIcon: `<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 6.5C6 6.5 3.5 10.5 3 12.5C3.5 14.3333 5.98668 18.5 12 18.5C18 18.5 20.5 14.6667 21 12.5C20.5 10.5 18 6.5 12 6.5Z" stroke="black" stroke-width="2"/>
+    <circle cx="12" cy="12.5" r="2" stroke="black" stroke-width="2"/>
+    <line x1="4.53033" y1="5.46967" x2="18.5303" y2="19.4697" stroke="black" stroke-width="1.5"/>
+    <line x1="5.24749" y1="4.75251" x2="19.2475" y2="18.7525" stroke="white" stroke-width="0.7"/>
+    </svg>`,
+    openEyeIcon: `<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 6.5C6 6.5 3.5 10.5 3 12.5C3.5 14.3333 5.98668 18.5 12 18.5C18 18.5 20.5 14.6667 21 12.5C20.5 10.5 18 6.5 12 6.5Z" stroke="black" stroke-width="2"/>
+    <circle cx="12" cy="12.5" r="2" stroke="black" stroke-width="2"/>
     </svg>`
 }

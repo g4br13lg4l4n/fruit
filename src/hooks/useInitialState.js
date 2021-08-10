@@ -61,6 +61,14 @@ const useInitialState = () => {
     });
   }
 
+  const setHidePass = hidePass => {
+    console.log('hidePass ---->', hidePass);
+    setState({
+      ...state,
+      hidePass
+    });
+  }
+
   return {
     setInicioPage,
     filterProducts,
@@ -70,6 +78,7 @@ const useInitialState = () => {
     setName,
     setPhone,
     setCategory,
+    setHidePass,
     state
   };
 };

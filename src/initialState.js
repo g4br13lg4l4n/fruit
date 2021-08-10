@@ -3,6 +3,7 @@ export default {
     inputFind: '',
     category: 'Frutas',
     inicioPage: 'LogIn',
+    hidePass: true,
     email: '',
     password: '',
     phone: '',

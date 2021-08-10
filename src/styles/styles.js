@@ -192,6 +192,12 @@ const styles = StyleSheet.create({
     color: gray3,
     fontSize: regularFontSize
   },
+  eyePassword: {
+    position: 'absolute', 
+    right: 0, 
+    top: 12
+  },
+
   /**
    * Home Screen
    */
